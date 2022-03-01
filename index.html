@@ -16,25 +16,25 @@
         <main class="main">
                 <div class="wrapper">
                     <div class="btn-group">
-                        <button id="wash-car" class="task-btn">Wash Car: $30</button>
-                        <button id="mow-lawn" class="task-btn">Mow Lawn: $20</button>
-                        <button id="pull-weeds" class="task-btn">Pull Weeds: $30</button>
+                        <button id="wash-car" class="task-btn" data-total=10 data-task="Wash Car">Wash Car: $10</button>
+                        <button id="mow-lawn" class="task-btn" data-total=20 data-task="Mow Lawn">Mow Lawn: $20</button>
+                        <button id="pull-weeds" class="task-btn" data-total=30 data-task="Pull Weeds">Pull Weeds: $30</button>
                     </div>
                     <section class="task-total flex-row">
                         <div class="task text-left">
                             <h2 class="task-heading heading-uppercase">Task</h2>
                             <ul class="task-list">
-                                <li>Wash Car <span class="remove">Remove</span></li>
-                                <li>Mow Lawn <span class="remove">Remove</span></li>
-                                <li>Pull Weeds <span class="remove">Remove</span></li>
+                                <!-- <li class="list-item">Wash Car <span class="remove">Remove</span></li>
+                                <li class="list-item">Mow Lawn <span class="remove">Remove</span></li>
+                                <li class="list-item">Pull Weeds <span class="remove">Remove</span></li> -->
                             </ul>
                         </div>
                         <div class="total text-right">
                             <h2 class="total-heading heading-uppercase">Total</h2>
                             <ul class="total-list">
-                                <li><span class="dollar-symbol">$</span>10</li>
-                                <li><span class="dollar-symbol">$</span>20</li>
-                                <li><span class="dollar-symbol">$</span>30</li>
+                                <!-- <li class="list-item"><span class="dollar-symbol">$</span>10</li>
+                                <li class="list-item"><span class="dollar-symbol">$</span>20</li>
+                                <li class="list-item"><span class="dollar-symbol">$</span>30</li> -->
                             </ul>
                         </div>
                     </section>
@@ -46,9 +46,10 @@
                         </div>
                         <div class="total-amount text-right">
                             <h2 class="heading-uppercase">Total Amount</h2>
-                            <p id="total-dollar-amount">$60</p>
+                            <p id="total-dollar-amount">$0</p>
                         </div>
                     </section>
+                    <button id="send-invoice" class="send-btn"><img src="./img/EmailIcon.svg" class="email-icon">Send Invoice</button>
                 </div>
         </main>
     </div>
