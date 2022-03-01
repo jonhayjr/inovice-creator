@@ -31,7 +31,10 @@ ul {
 }
 
 .container {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
     max-width: 550px;
+    width: 90%;
     text-align: center;
 }
 
@@ -135,7 +138,7 @@ ul {
 }
 
 .dollar-symbol {
-    opacity: 0.25;
+    opacity: 0.5;
 }
 
 /*Notes Total Amount*/
@@ -183,6 +186,10 @@ ul {
 }
 
 @media screen and (min-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
     .btn-group {
         flex-direction: row;
     }
