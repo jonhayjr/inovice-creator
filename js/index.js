@@ -1,3 +1,4 @@
+//Constants
 const taskList = document.querySelector('.task-list');
 const totalList = document.querySelector('.total-list');
 const totalDollarAmount = document.getElementById('total-dollar-amount');
@@ -7,6 +8,7 @@ const sendInvoiceBtn = document.getElementById('send-invoice');
 
 let tasks = [];
 
+//Function to render list items
 const renderListItems = () => {
     //Clear existing items from list
     taskList.textContent = '';
@@ -38,15 +40,13 @@ const renderListItems = () => {
 
         totalList.append(totalItem);
 
-
     })
-
 
    //Update total amount
     totalDollarAmount.textContent = "$" + totalSum(tasks);
 }
 
-//Function to get sum
+//Function to get total sum
 const totalSum = (arr) => {
    const sum = arr.reduce((sum, { total }) => sum + parseInt(total), 0)
    return sum;
@@ -61,10 +61,6 @@ const removeTaskItem = (item) => {
 
     //Remove items from respective arrays
     tasks.splice(index, 1);
-
-    //Enable corresponding button
-    const taskButton = document.querySelector(`[data-task="${parentListItemValue}"]`);
-    taskButton.disabled = false;
 }
 
 //Function to reset elements
@@ -72,14 +68,10 @@ const resetValues = () => {
     //Reset arrays
     tasks = [];
 
-    //Enable all task buttons 
-    taskButtons.forEach(btn => {
-        btn.disabled = false;
-    });
-
     //Re-render elements
     renderListItems();
 }
+
 
 //Event Listener for task buttons
 taskButtons.forEach(btn => {
@@ -88,14 +80,23 @@ taskButtons.forEach(btn => {
         const task = e.target.getAttribute('data-task');
         const total = e.target.getAttribute('data-total');
 
-        //Push to task array
-        tasks.push({name: task, total: total})
+        //Create object with task values
+        const newTask = {name: task, total: total};
+
+        //Check for index of new item
+        const index = tasks.findIndex((task) => {
+             return task.name === newTask.name;
+        })
+
+        //Only add item if it doesn't already exists in array
+        if (index === -1) {
+            //Push to task array
+            tasks.push(newTask)
+        }
 
         //Render new elements
         renderListItems();
 
-        //Disable button
-        e.target.disabled = true;
     })
 });
 
