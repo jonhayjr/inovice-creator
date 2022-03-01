@@ -19,4 +19,15 @@
 .header {
     text-align: center;
     background-color: var(--primary-color);
+    color: var(--white);
+    padding: 3em;
+}
+
+.heading {
+    font-size: 40px;
+    margin-bottom: 0.25em;
+}
+
+.heading-description {
+    font-weight: 400;
 }
