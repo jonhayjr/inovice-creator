@@ -14,10 +14,41 @@
             <p class="heading-decription">Thanks for choosing GoodCorp, LLC!</p>
         </header>
         <main class="main">
-                <div class="btn-group">
-                    <button id="wash-car" class="task-btn">Wash Car: $30</button>
-                    <button id="mow-lawn" class="task-btn">Mow Lawn: $20</button>
-                    <button id="pull-weeds" class="task-btn">Pull Weeds: $30</button>
+                <div class="wrapper">
+                    <div class="btn-group">
+                        <button id="wash-car" class="task-btn">Wash Car: $30</button>
+                        <button id="mow-lawn" class="task-btn">Mow Lawn: $20</button>
+                        <button id="pull-weeds" class="task-btn">Pull Weeds: $30</button>
+                    </div>
+                    <section class="task-total flex-row">
+                        <div class="task text-left">
+                            <h2 class="task-heading heading-uppercase">Task</h2>
+                            <ul class="task-list">
+                                <li>Wash Car <span class="remove">Remove</span></li>
+                                <li>Mow Lawn <span class="remove">Remove</span></li>
+                                <li>Pull Weeds <span class="remove">Remove</span></li>
+                            </ul>
+                        </div>
+                        <div class="total text-right">
+                            <h2 class="total-heading heading-uppercase">Total</h2>
+                            <ul class="total-list">
+                                <li><span class="dollar-symbol">$</span>10</li>
+                                <li><span class="dollar-symbol">$</span>20</li>
+                                <li><span class="dollar-symbol">$</span>30</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <hr class="divider">
+                    <section class="notes-total-amount flex-row">
+                        <div class="notes text-left">
+                            <h2 class="heading-uppercase">Notes</h2>
+                            <p class="notes-details">We accept cash, credit card, or PayPal</p>
+                        </div>
+                        <div class="total-amount text-right">
+                            <h2 class="heading-uppercase">Total Amount</h2>
+                            <p id="total-dollar-amount">$60</p>
+                        </div>
+                    </section>
                 </div>
         </main>
     </div>
