@@ -1,0 +1,22 @@
+/*Import Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap');
+
+/*Stylesheet reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #5B21B6;
+    --secondary-color: #1F2937;
+    --white: #F5F5F5;
+    --grey: #D1D4F4;
+}
+
+/*Header*/
+.header {
+    text-align: center;
+    background-color: var(--primary-color);
+}
